@@ -1,0 +1,17 @@
+Package: pathFindeR
+Type: Package
+Title: A package to find the shortest path between two points
+Version: 0.1.0
+Date: 2023-02-20
+Author: Igor Granado
+Maintainer: Igor Granado <igorgd@gmail.com>
+Description: A collection of algorithms for the static and time-dependent shortest path problem.
+URL: https://github.com/GranadoIgor/pathFindeR
+BugReports: https://github.com/GranadoIgor/pathFindeR/issues
+License: GPL (>= 2)
+Imports: Rcpp (>= 1.0.8), data.table, geosphere
+LinkingTo: Rcpp
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+RoxygenNote: 7.2.2

@@ -1,0 +1,16 @@
+useDynLib(pathFindeR, .registration=TRUE)
+importFrom(Rcpp, evalCpp)
+import(data.table)
+import(geosphere)
+
+# exportPattern("^[[:alpha:]]+")
+export(makeGraph)
+export(makeTDGraph)
+export(randomGraph)
+export(graphComponents)
+
+export(makeAdjcList)
+
+export(DFS)
+
+export(ErdosRenyiPmodel)
