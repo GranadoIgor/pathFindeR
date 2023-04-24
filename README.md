@@ -6,7 +6,7 @@ A collection of algorithms for the static and time-dependent shortest path probl
 
 ```R
 devtools::install_github("GranadoIgor/pathFindeR")
-library(miscellaneousR)
+library(pathFindeR)
 ```
 
 ## List of functions
