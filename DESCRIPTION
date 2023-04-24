@@ -2,7 +2,7 @@ Package: pathFindeR
 Type: Package
 Title: A package to find the shortest path between two points
 Version: 0.1.0
-Date: 2023-02-20
+Date: 2023-04-25
 Author: Igor Granado
 Maintainer: Igor Granado <igorgd@gmail.com>
 Description: A collection of algorithms for the static and time-dependent shortest path problem.
