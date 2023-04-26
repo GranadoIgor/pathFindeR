@@ -19,6 +19,13 @@ DFS <- function(graph, v) {
     .Call(`_pathFindeR_DFS`, graph, v)
 }
 
+#' Dijkstra algorithm to calculate the shortest path on a static graph object
+NULL
+
+Dijkstra <- function(graph, source, goal) {
+    .Call(`_pathFindeR_Dijkstra`, graph, source, goal)
+}
+
 #' Erdős–Rényi model for random graph creation
 NULL
 

@@ -52,6 +52,19 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// Dijkstra
+Rcpp::List Dijkstra(const RObject& graph, IntegerVector source, IntegerVector goal);
+RcppExport SEXP _pathFindeR_Dijkstra(SEXP graphSEXP, SEXP sourceSEXP, SEXP goalSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const RObject& >::type graph(graphSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type source(sourceSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type goal(goalSEXP);
+    rcpp_result_gen = Rcpp::wrap(Dijkstra(graph, source, goal));
+    return rcpp_result_gen;
+END_RCPP
+}
 // ErdosRenyiPmodel
 Rcpp::DataFrame ErdosRenyiPmodel(int n, double p);
 RcppExport SEXP _pathFindeR_ErdosRenyiPmodel(SEXP nSEXP, SEXP pSEXP) {
@@ -125,6 +138,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_pathFindeR_Astar", (DL_FUNC) &_pathFindeR_Astar, 5},
     {"_pathFindeR_Astarhfnc", (DL_FUNC) &_pathFindeR_Astarhfnc, 5},
     {"_pathFindeR_DFS", (DL_FUNC) &_pathFindeR_DFS, 2},
+    {"_pathFindeR_Dijkstra", (DL_FUNC) &_pathFindeR_Dijkstra, 3},
     {"_pathFindeR_ErdosRenyiPmodel", (DL_FUNC) &_pathFindeR_ErdosRenyiPmodel, 2},
     {"_pathFindeR_haversine", (DL_FUNC) &_pathFindeR_haversine, 4},
     {"_pathFindeR_euclidean", (DL_FUNC) &_pathFindeR_euclidean, 4},
