@@ -40,6 +40,18 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// BFS
+IntegerVector BFS(const RObject& graph, int v);
+RcppExport SEXP _pathFindeR_BFS(SEXP graphSEXP, SEXP vSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const RObject& >::type graph(graphSEXP);
+    Rcpp::traits::input_parameter< int >::type v(vSEXP);
+    rcpp_result_gen = Rcpp::wrap(BFS(graph, v));
+    return rcpp_result_gen;
+END_RCPP
+}
 // DFS
 IntegerVector DFS(const RObject& graph, int v);
 RcppExport SEXP _pathFindeR_DFS(SEXP graphSEXP, SEXP vSEXP) {
@@ -137,6 +149,7 @@ END_RCPP
 static const R_CallMethodDef CallEntries[] = {
     {"_pathFindeR_Astar", (DL_FUNC) &_pathFindeR_Astar, 5},
     {"_pathFindeR_Astarhfnc", (DL_FUNC) &_pathFindeR_Astarhfnc, 5},
+    {"_pathFindeR_BFS", (DL_FUNC) &_pathFindeR_BFS, 2},
     {"_pathFindeR_DFS", (DL_FUNC) &_pathFindeR_DFS, 2},
     {"_pathFindeR_Dijkstra", (DL_FUNC) &_pathFindeR_Dijkstra, 3},
     {"_pathFindeR_ErdosRenyiPmodel", (DL_FUNC) &_pathFindeR_ErdosRenyiPmodel, 2},

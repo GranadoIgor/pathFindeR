@@ -12,5 +12,6 @@ export(graphComponents)
 export(makeAdjcList)
 
 export(DFS)
+export(BFS)
 
 export(ErdosRenyiPmodel)

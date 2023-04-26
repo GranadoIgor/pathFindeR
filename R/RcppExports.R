@@ -15,6 +15,10 @@ Astarhfnc <- function(graph, source, goal, hFnc, hCoef = 1) {
     .Call(`_pathFindeR_Astarhfnc`, graph, source, goal, hFnc, hCoef)
 }
 
+BFS <- function(graph, v) {
+    .Call(`_pathFindeR_BFS`, graph, v)
+}
+
 DFS <- function(graph, v) {
     .Call(`_pathFindeR_DFS`, graph, v)
 }
