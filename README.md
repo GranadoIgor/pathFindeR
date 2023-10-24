@@ -22,5 +22,6 @@ library(pathFindeR)
 
 - `DFS()`, the Depth First Search algorithm is a graph traversal algorithm that explores as far as possible along each branch before backtracking. 
 - `BFS()`, the Breadth-first search algorithm is a graph traversal algorithm that visits all the nodes of a graph in breadth-first order, visiting all the neighbors of a node before visiting any of their neighbors.
-- `Dijkstra()`, The Dijkstra algorithm is a shortest-path algorithm that finds the shortest path between a starting node and all other nodes in a weighted graph, by iteratively selecting the node with the lowest distance and updating the distances of its neighbors.
-- `Astar()`, the A* algorithm is a heuristic search algorithm that finds the shortest path between a starting node and a goal node in a weighted graph. 
+- `Dijkstra()`, the Dijkstra algorithm is a shortest-path algorithm that finds the shortest path between a starting node and all other nodes in a weighted graph, by iteratively selecting the node with the lowest distance and updating the distances of its neighbors.
+- `Astar()`, the A* algorithm is a heuristic search algorithm that finds the shortest path between a starting node and a goal node in a weighted graph.
+- `Time-dependent Dijkstra`, the time-dependent Dijkstra algorithm finds the shortest path between a starting node and all other nodes in a weighted time-dependent graph. Note that it only works usng the time as the objective function.
