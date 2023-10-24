@@ -13,5 +13,9 @@ export(makeAdjcList)
 
 export(DFS)
 export(BFS)
+export(Dijkstra)
+export(Astar)
+export(Astarhfnc)
+export(tdDijkstra)
 
 export(ErdosRenyiPmodel)

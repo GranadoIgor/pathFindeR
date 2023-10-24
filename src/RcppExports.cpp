@@ -145,6 +145,19 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// tdDijkstra
+Rcpp::List tdDijkstra(const RObject& graph, IntegerVector sources, IntegerVector goals);
+RcppExport SEXP _pathFindeR_tdDijkstra(SEXP graphSEXP, SEXP sourcesSEXP, SEXP goalsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const RObject& >::type graph(graphSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type sources(sourcesSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type goals(goalsSEXP);
+    rcpp_result_gen = Rcpp::wrap(tdDijkstra(graph, sources, goals));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_pathFindeR_Astar", (DL_FUNC) &_pathFindeR_Astar, 5},
@@ -157,6 +170,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_pathFindeR_euclidean", (DL_FUNC) &_pathFindeR_euclidean, 4},
     {"_pathFindeR_manhattan", (DL_FUNC) &_pathFindeR_manhattan, 4},
     {"_pathFindeR_canberra", (DL_FUNC) &_pathFindeR_canberra, 4},
+    {"_pathFindeR_tdDijkstra", (DL_FUNC) &_pathFindeR_tdDijkstra, 3},
     {NULL, NULL, 0}
 };
 

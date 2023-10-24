@@ -53,3 +53,7 @@ canberra <- function(lon1, lat1, lon2, lat2) {
     .Call(`_pathFindeR_canberra`, lon1, lat1, lon2, lat2)
 }
 
+tdDijkstra <- function(graph, sources, goals) {
+    .Call(`_pathFindeR_tdDijkstra`, graph, sources, goals)
+}
+
